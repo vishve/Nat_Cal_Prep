@@ -8,7 +8,35 @@
 </head>
 <body>
     <script> 
-     </script>  
 
+    dogkeepers = {a: "1", b: "2", c: 3};
+
+    function Dog(name) {  this.name = name; }
+    dogkeepers.mydogname = function (d) { this.name = d;}
+    
+    Dog.prototype.numLegs = 4;
+
+    let beagle = new Dog("Snoopy");
+    let ownProps = [];
+    let prototypeProps = [];    
+
+// Only change code below this line
+for (p in beagle)
+{
+  if (beagle.hasOwnProperty(p)) { ownProps.push (p);}
+  else { prototypeProps.push (p);}
+}
+
+for (q in dogkeepers )  // need to try for -- of and find reason why its not woring
+{ if (dogkeepers.hasOwnProperty(q)) {
+        ownProps.push(q); }
+    else { prototypeProps.push(q);}
+}
+console.log(ownProps);
+console.log(prototypeProps);
+console.log(Object.getPrototypeOf(dogkeepers));
+
+</script>  
+     
 </body>
 </html>
