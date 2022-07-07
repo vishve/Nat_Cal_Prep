@@ -1,9 +1,9 @@
-//const list = document.querySelector('ul');
-//const totalBox = document.querySelector('p');
+const list = document.querySelector('ul');
+const totalBox = document.querySelector('p');
 //works equally good : document model DOM methos:
-const list = document.getElementById('output');
-const totalBox = document.getElementById('output_p');
-//const list = document.querySelector('.mycssclass'); //queryselectors are usedfor selectors beitTML nodes or CSS Classes
+//const list = document.getElementById('output');
+//const totalBox = document.getElementById('output_p');
+//const list = document.querySelector('.mycssclass'); //Example for Class selection : queryselectors are usedfor selectors beitTML nodes or CSS Classes
 let total = 0;
 list.innerHTML=' ';
 totalBox.textContent = ' ';
