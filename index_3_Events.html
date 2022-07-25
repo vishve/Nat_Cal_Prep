@@ -182,11 +182,11 @@ document.addEventListener("DOMContentLoaded", function() {
         case 'mouseup':
           elem_5.innerHTML += "...and released.";
           break;
-      }
-    }
-  }
+      } // end switch
+    }// end handleEvent
+  }// end class
 
-  let menu = new Menu();
+  var menu = new Menu();  // let and var are 2 different declarations; var is necessary here to essentially create the memory object 
   elem_5.addEventListener('mousedown', menu);
   elem_5.addEventListener('mouseup', menu);
 </script>
