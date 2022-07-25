@@ -1,0 +1,222 @@
+<!-- source javascript.info( https://javascript.info/introduction-browser-events )-->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- fully functional page, can be executed any time-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This page is for events</h1>
+    <marquee> checking the old scroooooooooool</marquee>
+
+
+    <input value="Click me" onclick="alert('Click!')" type="button"> <!-- inline event harly used-->
+    
+    <!-- at max we can create a function with the javascript ( inline ) and use it there in html like so:  -->
+    <p>
+        <script>
+            function countRabbits() {
+            for(let i=1; i<=3; i++) { alert("Rabbit number " + i); }
+            }
+        </script>
+        
+        <input type="button" onclick="countRabbits()" value="Count rabbits upto 3 !">
+    <!-- ( Handler is a function assiigned to an event , here, countRabbits () is a handler) -->
+    </p>
+        <!-- or we can do a dom porperty like so : -->
+    <p>
+        <input id="elem" type="button" value="Click me">
+            <script>
+                elem.onclick = function() { alert('Thank you');  };   // this is EVENT HANDLER
+            </script>
+    </p>
+        <!-- event Handlers gets overwritten but can only be one till here -->
+    <p>
+        <input type="button" id="elem2" onclick="alert('Before')" value="Click me">
+            <script>
+             function sayThanks () { // overwrites the existing handler
+                alert('Thank You'); // only this will be shown
+             };
+             elem2.onclick = sayThanks; // Note as we need to implement, we have to call the funciton and are not expecting the result only as a return value
+            </script>
+            <!-- Note that the HTMLwill need the function execution result as below -->
+            <p> <input type="button" id="button" value ="button" onclick="sayThanks()"></p>
+            
+            <!-- When the browser reads the attribute, 
+                it creates a handler function with body 
+                from the attribute content hence sayThanks() for browser 
+                and simply sayTnaks for JavaScript.
+            Also note that JavaScript is CASE SENSITIVE, while HTML is not-->
+
+    </p>
+    
+    <p>
+        <!-- to access the element itself lets use this property-->
+
+        <button id= "button1" onclick="alert(this.innerHTML)">Click --  me</button>
+        <!-- to remove the event, just assign null to the event -->
+        <script> 
+        //button1.onclick = "null" 
+        // just remove the above comment and the button event will be gone.
+        </script>
+          
+
+    </p>
+<!-- THe events in HTML, inine or DOM can be assigned once, 
+    if we write them again, it will simply overrite the earlier one 
+    and the latest mentioned will be onlu displayed, hence, to get this going, 
+special methods were creaaddEventListener and removeEventListenerted called eventLISTENERS.
+
+addEventListener and 
+removeEventListener -->
+
+<!-- and this will not work:
+        <script>
+            elem.addEventListener( "click" , () => alert('Thanks!'));
+        // ....
+        elem.removeEventListener( "click", () => alert('Thanks!'));
+        <script>
+because, the removal function is mentioned with another object in the browser, so,    
+-->
+<!-- standard addEventListener format: 
+<script>
+    element.addEventListener(event, handler, [options]);
+    //definitions: event : any event that the documentcancapture,handler (  funciton assigned),
+    //options are interesting. 
+    //default: capturing:false, if set to true, the capturing phase too gets cosidered.
+    // other options preventDefault(); prevents teh event bubbling at this node . 
+    // other option : once : true ; // this happens only once. 
+    
+
+</script>
+-->
+
+<input id="elem_1" type="button" value="EventListenerClick me"/>
+<script>
+        function handler() {
+            alert( 'Thanks!' );
+        }
+        
+        elem_1.addEventListener("click", handler);
+        // ....
+        //elem_1.removeEventListener("click", handler); // just remove the comments to remve the event handler
+</script>
+<p>
+    	
+<input id="elem_2" type="button" value="Multiple_events_Click me"/>
+
+<script>
+    // thats how we do multiple event handlers using event listeners..
+  
+    function handler1() {
+      alert('Thanks!');
+    };
+
+  function handler2() {
+    alert('Thanks again!');
+  }
+
+  elem_2.onclick = () => alert("Hello");
+  elem_2.addEventListener("click", handler1); // Thanks!
+  elem_2.addEventListener("click", handler2); // Thanks again!
+  </script>
+</p>
+
+<p>
+<!-- some dom events dont have handlers but
+    are only managed by addeventlistener, like so 
+    this alert will appear in the very begining of the page as the page loads . -->
+<script>
+// this way it works
+document.addEventListener("DOMContentLoaded", function() {
+  alert("DOM built check the DOMContentLoad Event");
+});
+</script>
+</p>
+
+<!-- event objects  can be very precise, 
+    can tell the mouse coordinates, keypresses and so on
+    ever thought of games ? these are tricky Javascript things 
+    sometines google gives small games to enguage you huh! like so-->
+<input type="button" value="Click me" id="elem_3">
+
+<script>
+  elem_3.onclick = function(event) {
+    // show event type, element and coordinates of the click
+    alert(event.type + " at " + event.currentTarget);
+    alert("Coordinates: " + event.clientX + ":" + event.clientY);
+    
+  };
+</script>
+
+<input type="button" onclick="alert(event.type)" value="Event type">
+<!-- While using addEventListener, When an event occurs, 
+    its handleEvent method is called by the event created in browser
+    so,we can write a function or a complete class-->
+
+<button id="elem_4">Click me</button>
+
+<script>
+  let obj = {
+    handleEvent(event) {
+      alert(event.type + " at " + event.currentTarget);
+    }
+  };
+
+  elem_4.addEventListener('click', obj);
+</script>
+
+<button id="elem_5">Click me</button>
+
+<script>
+    // class below
+  class Menu {
+    handleEvent(event) {
+      switch(event.type) {
+        case 'mousedown':
+          elem_5.innerHTML = "Mouse button pressed";
+          break;
+        case 'mouseup':
+          elem_5.innerHTML += "...and released.";
+          break;
+      }
+    }
+  }
+
+  let menu = new Menu();
+  elem_5.addEventListener('mousedown', menu);
+  elem_5.addEventListener('mouseup', menu);
+</script>
+
+<!-- The method handleEvent does 
+    not have to do all the job by itself. 
+    It can call other event-specific methods instead,
+     like this:-->
+
+<button id="elem_6">Click me</button>
+    <script>
+        class Menu {
+        handleEvent(event) {
+        // mousedown -> onMousedown
+        let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+        this[method](event);
+        }
+        onMousedown() { elem_6.innerHTML = "Mouse button pressed";         }
+
+        onMouseup() { elem_6.innerHTML += "...and released.";      }
+    }
+
+    let menu = new Menu();
+    elem_6.addEventListener('mousedown', menu);
+    elem_6.addEventListener('mouseup', menu);
+    </script>
+
+<!--No matter how you assign the handler – it gets 
+    an event object as the first argument. 
+    That object contains the details about what’s happened.-->
+
+</body>
+</html>
