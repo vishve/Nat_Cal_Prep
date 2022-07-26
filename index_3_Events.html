@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
   elem_4.addEventListener('click', obj);
 </script>
 
-<button id="elem_5">Click me</button>
+<button id="elem_5">Click me Elem_5</button>
 
 <script>
     // class below
@@ -196,22 +196,21 @@ document.addEventListener("DOMContentLoaded", function() {
     It can call other event-specific methods instead,
      like this:-->
 
-<button id="elem_6">Click me</button>
+<p>
+<button id="elem_6">Click me Elem_6</button>
+<div id="output6"> output6</div> </p>
+<p>
+  <input id="itextbox1" type="text">
+<div id="outtxt" > textoutput : </div>
+</p>
     <script>
-        class Menu {
-        handleEvent(event) {
-        // mousedown -> onMousedown
-        let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
-        this[method](event);
-        }
-        onMousedown() { elem_6.innerHTML = "Mouse button pressed";         }
-
-        onMouseup() { elem_6.innerHTML += "...and released.";      }
-    }
-
-    let menu = new Menu();
-    elem_6.addEventListener('mousedown', menu);
-    elem_6.addEventListener('mouseup', menu);
+       const butt6 = document.querySelector("#elem_6");
+       const out6 = document.getElementById ("output6");
+       const txtb1 = document.querySelector("#itextbox1");
+       const outbox1 = document.getElementById("outtxt");
+       // in the lines below use backslash, not inverted braces, or quotes => JS Shit.
+       butt6.addEventListener('click',(event) => out6.textContent = `you created a "${event.type}" event.`);
+       txtb1.addEventListener ('keydown', (evt) => outbox1.textContent=`you pressed a "${evt.key}" key.`);
     </script>
 
 <!--No matter how you assign the handler – it gets 
