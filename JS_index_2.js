@@ -1,5 +1,10 @@
 //Source: https://youtu.be/5fb2aPlgoys
-//DOM Manupulation
+
+//DOM Manupulation(5): 
+
+//getElementByID, getElementByTagName , getElementByClassName, 
+//querySelector, queryselectorAll 
+
 // //getElementById 
 // const title = document.getElementById('main-heading');
 // console.log(title)

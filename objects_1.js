@@ -1,11 +1,12 @@
 // source: https://youtu.be/XskMWBXNbp0
 // Protptyps basics
-//DONT tun the file - read and follow the comments only 
-//to check the individual code part, open browser and paste the funcitons in the developer tools > console. 
+//DONT run the file - read and follow the comments only 
+//to check the individual code part, 
+//open browser and paste the funcitons in the developer tools > console. 
 
 
 
-// creating an object andrelated funcitons
+// creating an object and related funcitons
 // let animal = {
 //     name : 'leo',
 //     energy : 10 , 
@@ -63,8 +64,10 @@
 // const Animal ( 'snoop', 10);
 
 // Untill here, we were producing objects and passing values, 
-//but every time we do so, we were creating the funcitons in the memory, eating too much of the runtime. 
-// So, we start creating a reference to the object instead of the memory and create the objects once (need modification).
+// but every time we do so, we were creating the funcitons in the memory,
+// eating too much of the runtime. 
+// So, we start creating a reference to the object instead of the memory and 
+// create the objects once (need modification).
 
 // const animalMethods = {
 //     eat (amount) {
@@ -93,8 +96,11 @@
     
 //     return animal
 // }
-// Now, every time you create a new method, you have to add the respective reference in the Animal funciton,
-// how about creating animalMethods Object, such that they gets referenced automatically ?
+// Now, every time you create a new method, 
+// you have to add the respective reference in the Animal funciton,
+
+// how about creating animalMethods Object, 
+//such that they gets referenced automatically ?
 // for this, we use Object.create, see below. 
 
 
@@ -132,7 +138,7 @@
 // it will return an OBJECT with a { constructior :f } property on it .. ( check yourself)
 // this means, a protptype  is a property on a fuction that points to an object .
 
-function Animal (name, energy) { // tthis now becomes a constructior function
+function Animal (name, energy) { // this now becomes a constructior function
     let animal = Object.create(Animal.prototype)
     animal.name = name;
     animal.energy = energy;
@@ -212,7 +218,7 @@ const snoopWithNewClassObj = new AnimalWithNew ('SnoopWithNewCO', 10)
 
 //  document.getElementById ('eater').innerText = 
 //  ` ${animal.name} has now got energy : ${animal.energy}`
- 
+ //document.getElementById ('eater').textContent =` ${animal.name} has now got energy : ${animal.energy}`
 
 // elements in the browser console (  inspect element (f12) ---> console ).
 
