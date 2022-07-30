@@ -1,0 +1,38 @@
+body{
+    margin:0px;
+    /* min-height: 1100px; */
+
+}
+body, div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+.grandParent{
+    /* margin: 25px;
+    font-family: arial, sans-serif;
+    font-size: 14px; */
+    width: 200px;
+    height: 200px;
+    background-color: rgb(234, 13, 13);
+
+}
+.parent{
+    /* margin: 25px;
+    font-family: arial, sans-serif;
+    font-size: 14px; */
+    width: 130px;
+    height: 130px;
+    background-color: rgb(63, 18, 243);
+}
+.child{
+    width:60px;
+    height:60px;
+    background-color: rgb(208, 242, 12);
+    /* margin: 2em;
+    font-family: arial, sans-serif;
+    font-size: 14px; */
+
+}
