@@ -58,7 +58,9 @@ child.addEventListener('click', e => {
 );
 child.addEventListener('click', e => {
     console.log("traversed Child Bubble ")
-   // e.stopPropagation() // stops event propopgatiion (bubbling) at this point, check the effect after enabling it, the document and window bubbling events wont happen.
+   // e.stopPropagation() // stops event propopgatiion (bubbling) at this point,
+   // check the effect after enabling it, 
+   //the document and window bubbling events wont happen.
 });
 document.addEventListener('click', e => {
     console.log("traversed document Bubble ")

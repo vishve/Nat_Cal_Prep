@@ -2,8 +2,8 @@
 // const divs = document.querySelectorAll('div')
 
 document.addEventListener ("click", e => {
-if (e.target.matches("div")) {
-    console.log("hi, eventListener 1 div found")
+if (e.target.matches ("div")) {
+    console.log('hi '+ e.target.getAttribute('class') + ' found');
 }
 }) // event listener added with MATCH funciton under target function
 // the above funciton can be re-writen as below and called with the funciton latter
@@ -30,6 +30,9 @@ const newDev = document.createElement('div')
 newDev.style.width= "200px"
 newDev.style.height= "200px"
 newDev.style.backgroundColor="purple"
-newDev.append("new from JS")
+newDev.append("new from JS") 
+//newDev.innerText("new from JS") 
+
 //document.querySelector('body').append (newDev)
 document.body.append (newDev)
+

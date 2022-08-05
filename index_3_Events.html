@@ -61,9 +61,9 @@
         <script> 
         //button1.onclick = "null" 
         // just remove the above comment and the button event will be gone.
+        //reason: the handler once passed to browser,cant be called back 
+        //but can only be re-assigned, hence, button.onclick is re-assigned.
         </script>
-          
-
     </p>
 <!-- THe events in HTML, inine or DOM can be assigned once, 
     if we write them again, it will simply overrite the earlier one 
@@ -141,13 +141,16 @@ document.addEventListener("DOMContentLoaded", function() {
     can tell the mouse coordinates, keypresses and so on
     ever thought of games ? these are tricky Javascript things 
     sometines google gives small games to enguage you huh! like so-->
-<input type="button" value="Click me" id="elem_3">
+<input type="button" value="Click me_3" id="elem_3">
 
 <script>
-  elem_3.onclick = function(event) {
+  elem_3.onclick = function(event1) {
     // show event type, element and coordinates of the click
-    alert(event.type + " at " + event.currentTarget);
-    alert("Coordinates: " + event.clientX + ":" + event.clientY);
+    alert(event1.type + " at " + event1.currentTarget);
+    alert("Coordinates: " + event1.clientX + ":" + event1.clientY);
+    console.log(event1)
+    console.log (" and this is the list of target methods")
+    console.log(event1.target)
     
   };
 </script>
