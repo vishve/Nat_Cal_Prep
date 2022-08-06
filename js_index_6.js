@@ -9,7 +9,6 @@
 //use ctrl+KU key combination to remove comments and
 // Ctrl+KC to re-comment simultaneously
 
-
 document.querySelector('#sports').addEventListener
 ('click', function (e){
 
@@ -24,8 +23,10 @@ document.querySelector('#sports').addEventListener
 
 // lets prove for future nodes if appear, so lets add one more node.
 
-document.querySelector('#butt').addEventListener
-('click', function(e){
+document.querySelector('#button01').addEventListener
+('click', butevnt, {once:true} )
+
+function butevnt(e){
 
     // adding more nodes to ul list element in html
     const sport= document.querySelector('#sports');
@@ -34,8 +35,6 @@ document.querySelector('#butt').addEventListener
     newsport.setAttribute('id', 'rugby');
     sport.appendChild(newsport);
 }
-)
-
 
 
 
