@@ -1,0 +1,15 @@
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\bin\Debug\net7.0\LinqExperiments.exe
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\bin\Debug\net7.0\LinqExperiments.deps.json
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\bin\Debug\net7.0\LinqExperiments.runtimeconfig.json
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\bin\Debug\net7.0\LinqExperiments.dll
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\bin\Debug\net7.0\LinqExperiments.pdb
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.csproj.AssemblyReference.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.AssemblyInfoInputs.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.AssemblyInfo.cs
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.csproj.CoreCompileInputs.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.dll
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\refint\LinqExperiments.dll
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.pdb
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\LinqExperiments.genruntimeconfig.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\obj\Debug\net7.0\ref\LinqExperiments.dll
