@@ -1,0 +1,15 @@
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\bin\Debug\net7.0\MS Example_First.exe
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\bin\Debug\net7.0\MS Example_First.deps.json
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\bin\Debug\net7.0\MS Example_First.runtimeconfig.json
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\bin\Debug\net7.0\MS Example_First.dll
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\bin\Debug\net7.0\MS Example_First.pdb
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.csproj.AssemblyReference.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.AssemblyInfoInputs.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.AssemblyInfo.cs
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.csproj.CoreCompileInputs.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.dll
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\refint\MS Example_First.dll
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.pdb
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\MS Example_First.genruntimeconfig.cache
+D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\MS Example_First\obj\Debug\net7.0\ref\MS Example_First.dll
