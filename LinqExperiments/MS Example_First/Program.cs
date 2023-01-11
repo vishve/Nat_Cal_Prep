@@ -24,13 +24,14 @@ namespace LinqExperiments // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            string[] fileA = System.IO.File.ReadAllLines(@"D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\datafile1.txt");
-            string[] fileB = System.IO.File.ReadAllLines(@"D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\datafile2.txt");
+            string fpath01 = @".\datafile1.txt";
+            string fpath02 = @".\datafile2.txt";
+            
+            string[] fileA = System.IO.File.ReadAllLines(fpath01);
+            string[] fileB = System.IO.File.ReadAllLines(fpath02);
             //Array.ForEach(fileA, Console.WriteLine);
             // testing the contents of the file being copied to array.
             Console.WriteLine( string.Join("\n", fileA));
-            
-            
             // Merging the files and removing the duplicates...
             var mergedFilesWithNoDuplicates = fileA.Union(fileB);
             // linq query no where used here
@@ -42,7 +43,7 @@ namespace LinqExperiments // Note: actual namespace depends on the project name.
             Console.WriteLine("\nSplitter file results :\n");
             foreach( var g in groupLinqQuery)
             {
-                string newFileCreated = @"D:\GIT_Necal\Nat_Cal_Prep\LinqExperiments\testfile_" + g.Key + ".txt";  // file manupulation string 
+                string newFileCreated = @".\dataCreated_Deleteonly\" + g.Key + ".txt";  // file manupulation string 
                 Console.WriteLine(g.Key + "\t");
 using (System.IO.StreamWriter sw = new System.IO.StreamWriter(newFileCreated)) // toughest line
                 {

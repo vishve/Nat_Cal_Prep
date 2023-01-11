@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\LinqExperiments.csproj": {}
+    "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\MS Example_First\\LinqExperiments.csproj": {}
   },
   "projects": {
-    "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\LinqExperiments.csproj": {
+    "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\MS Example_First\\LinqExperiments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\LinqExperiments.csproj",
+        "projectUniqueName": "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\MS Example_First\\LinqExperiments.csproj",
         "projectName": "LinqExperiments",
-        "projectPath": "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\LinqExperiments.csproj",
+        "projectPath": "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\MS Example_First\\LinqExperiments.csproj",
         "packagesPath": "C:\\Users\\vij\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\obj\\",
+        "outputPath": "D:\\GIT_Necal\\Nat_Cal_Prep\\LinqExperiments\\MS Example_First\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vij\\AppData\\Roaming\\NuGet\\NuGet.Config"
