@@ -22,10 +22,11 @@ sqlite3 Northwind.db -init Northwind.sql  <<<< Populates the database form the s
 scaffolding: needs another folder so that new classes can be created and compared.
 (for class creation from database tables) dotnet ef dbcontext scaffold "Filename=Northwind.db" Microsoft.EntityFrameworkCore.Sqlite --table Categories --table Products --output-dir AutoGenModels --namespace MyPack.Shared.AutoGenModels --data-annotations --context Northwind
 
+1. install tool dotnet -ef (entity framework for cli ) command: 
 
-
-install tool dotnet -ef (entity framework for cli ) command: 
-dotnet tool install --global dotnet-ef
+    dotnet tool install --global dotnet-ef
+2. run command for scaffolding : 
+dotnet ef dbcontext scaffold "Filename=Northwind.db" Microsoft.EntityFrameworkCore.Sqlite --table Categories --table Products --output-dir My_Scaffolded_AutoGenModels --namespace MyPack.Shared.MyAutoGen --data-annotations --context Northwind
 
 verify by the command : dotnet tool list --global
 Uninstall : dotnet tool uninstall --global dotnet-ef
