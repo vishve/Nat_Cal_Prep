@@ -2,7 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MyPack.Shared
 {
-public class Northwind : DbContext
+    //NOTE Northwind is extracted from DbContext and must contain atleast 1 DbSet <T> 
+    // it also contains overridden method OnModelCreating  
+public class Northwind : DbContext   
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -16,13 +18,14 @@ public class Northwind : DbContext
         protected override void OnModelCreating (ModelBuilder modelBulider)
         {
             modelBulider.Entity<Category>()
+            
             .Property(category => category.CategoryName)
             .IsRequired() // NotNull
             .HasMaxLength(15);
 
-            modelBulider.Entity<Product>()
-            .Property(product => product.Cost)
-            .HasConversion<double>();
+            modelBulider.Entity<Product>().Property(product => product.Cost).HasConversion<double>();
+            modelBulider.Entity<Product>().Property(product => product.ProductName).IsRequired().HasMaxLength(40);
+
         }
     }
 }
